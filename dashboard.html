@@ -1,0 +1,48 @@
+<!-- File: dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - VTU Admin</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="nav-links">
+      <h2>VTU Admin</h2>
+      <ul>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="history.html">Transactions</a></li>
+        <li><a href="users.html">Users</a></li>
+        <li><a href="wallet.html">Wallet</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="settings.html">Settings</a></li>
+      </ul>
+    </div>
+    <button id="logout-btn" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="main-content">
+    <h1>Dashboard Overview</h1>
+    <div class="stats">
+      <div class="card">Total Users<br><strong id="user-count">...</strong></div>
+      <div class="card">Revenue Today<br><strong id="revenue-today">...</strong></div>
+      <div class="card">Successful Txns<br><strong id="success-count">...</strong></div>
+      <div class="card">Failed Txns<br><strong id="failed-count">...</strong></div>
+    </div>
+
+    <h2>Recent Transactions</h2>
+    <table>
+      <thead>
+        <tr><th>Time</th><th>Service</th><th>Amount</th><th>Status</th><th>Ref ID</th></tr>
+      </thead>
+      <tbody id="recent-tbody">
+        <!-- dynamic rows -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
